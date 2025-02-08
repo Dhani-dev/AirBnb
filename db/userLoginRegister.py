@@ -26,5 +26,5 @@
      #   flash(mensaje)
       #  return redirect(url_for('registro')
 
-from database import conexion
+from datab import conexion
 
