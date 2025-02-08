@@ -1,26 +1,15 @@
-from conexion import obtener_conexion
-import bcrypt
 
-def registrar_usuario_bd(usuario, correo, contrasena):
-    """Registra un nuevo usuario en la base de datos Neon."""
-    conn = obtener_conexion()
-    if conn is None:
-        return False, "Error al conectar con la base de datos."
+from pymongo import mongo_client
+from pymongo.server_api import ServerApi
 
-    try:
-        with conn.cursor() as cur:
-            hashed_password = bcrypt.hashpw(contrasena.encode('utf-8'), bcrypt.gensalt())
+uri = "mongodb+srv://emanuelongo1001cano:Mongodb2310*.@airbnb.fb2hk.mongodb.net/?retryWrites=true&w=majority&appName=AirBnb"
 
-            cur.execute(
-                "INSERT INTO usuario (usuario, correo, contrasena) VALUES (%s, %s, %s)",
-                (usuario, correo, hashed_password.decode('utf-8'))
-            )
-            conn.commit()
-            return True, "Usuario registrado exitosamente."
+# Create a new client and connect to the server
+client = MongoClient(uri, server_api=ServerApi('1'))
 
-    except Exception as e:
-        print(f"Error al registrar usuario: {e}")
-        return False, "Error al registrar usuario."
-
-    finally:
-        conn.close()
+# Send a ping to confirm a successful connection
+try:
+    client.admin.command('ping')
+    print("Pinged your deployment. You successfully connected to MongoDB!")
+except Exception as e:
+    print(e)
