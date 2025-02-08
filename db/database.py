@@ -1,15 +1,11 @@
+import psycopg2
 
-from pymongo import mongo_client
-from pymongo.server_api import ServerApi
+DATABASE='neondb'
+PGHOST='ep-wispy-hat-a53laenz-pooler.us-east-2.aws.neon.tech'
+PGDATABASE='neondb'
+PGUSER='neondb_owner'
+PGPASSWORD='npg_Pz2XQfgh4bak'
 
-uri = "mongodb+srv://emanuelongo1001cano:Mongodb2310*.@airbnb.fb2hk.mongodb.net/?retryWrites=true&w=majority&appName=AirBnb"
+connection = psycopg2.connect(database = 'neondb', user = PGUSER, password = PGPASSWORD, host = PGHOST, port = 5432)
 
-# Create a new client and connect to the server
-client = MongoClient(uri, server_api=ServerApi('1'))
-
-# Send a ping to confirm a successful connection
-try:
-    client.admin.command('ping')
-    print("Pinged your deployment. You successfully connected to MongoDB!")
-except Exception as e:
-    print(e)
+conexion = connection.cursor()
