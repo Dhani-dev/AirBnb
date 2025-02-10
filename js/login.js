@@ -14,6 +14,7 @@ loginBtn.addEventListener('click', () => {
 
 loginForm.addEventListener('submit', (event) => {
     event.preventDefault(); // Evita que el formulario se envíe automáticamente
+    localStorage.setItem("userLogged", "true") // Guarda si el usuario inició sesión
     window.location.href = 'ProfileUser.html'; // Redirige al perfil del usuario
 });
 
