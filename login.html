@@ -7,6 +7,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/styleLogin.css">
     <link rel="icon" href="img/iconoGO.png">
+    <script src="js/login.js" src="js/signup.js" type="module"></script>
+    
 </head>
 <body>
     <button type="submit" class="btn-return-home"><i class='bx bx-home'></i></button>
@@ -32,19 +34,19 @@
         </div> 
 
         <div class="form-box register"> 
-            <form method="post" action="db/registrar">
+            <form id="signup-form">
              <!--PONER LINK DE DONDE SE ENVIARAN LOS DATOS-->
                 <h1>Registro</h1>
                 <div class="input-box">
-                    <input type="text" name="usuario" placeholder="Usuario" required>
+                    <input type="text" id="signup-usuario" name="usuario" placeholder="Usuario" required>
                     <i class='bx bxs-user' ></i>
                 </div>
                 <div class="input-box">
-                    <input type="email" name="email" placeholder="Correo electrónico" required>
+                    <input type="email" id="signup-email" name="email" placeholder="Correo electrónico" required>
                     <i class='bx bxs-envelope' ></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <input type="password" id="signup-password" name="password" placeholder="Contraseña" required>
                     <i class='bx bxs-lock-alt'></i>
                 </div>
                 <button type="submit" class="btn-register">Registrarse</button>
@@ -67,7 +69,7 @@
         </div>
 
     </div>
-
-    <script src="js/login.js"></script>
+    
+    
 </body>
 </html>
