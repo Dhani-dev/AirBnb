@@ -1,5 +1,6 @@
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-auth.js";
 import { auth } from "./firebase.js";
+import {showMessage} from  './showMessage.js'
 
 // Detectar cuando el modal se ha abierto
 const observer = new MutationObserver(() => {
@@ -30,15 +31,22 @@ function initSignupForm() {
         try {
             const userCredentials = await createUserWithEmailAndPassword(auth, email, password);
             console.log("Usuario creado:", userCredentials);
+
+            const sigupModal = document.querySelector('#signupModal')
+            const modal = bootstrap.Modal.getInstance(sigupModal)
+            modal.hide()
+
+            showMessage("Bienvenido " + userCredentials.user.email)
+
         } catch (error) {
             if (error.code === 'auth/email-already-in-use') {
-                alert('Correo en uso');
+                showMessage("Correo en uso", "error")
             } else if (error.code === 'auth/invalid-email') {
-                alert('Email inválido');
+                showMessage("Email inválido", "error")
             } else if (error.code === 'auth/weak-password') {
-                alert('Contraseña demasiado débil');
+                showMessage("Contraseña demasiado débil", "error")
             } else {
-                alert('Algo salió mal');
+                showMessage("Algo salió mal", "error")
             }
         }
     });
