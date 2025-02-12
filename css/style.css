@@ -9523,6 +9523,11 @@ h6,
   color: #7AB730;
 }
 
+.navbar{
+  position: relative;
+  z-index: 1050;
+}
+
 @media (max-width: 991.98px) {
   .navbar-light .navbar-nav .nav-link {
     padding: 10px 15px;
@@ -9535,6 +9540,7 @@ h6,
     margin-top: -42px;
   }
 }
+
 
 .carousel-caption {
   top: 0;
