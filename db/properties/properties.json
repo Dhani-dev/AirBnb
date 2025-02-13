@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTAyMTAwNDA5MzMyNjg1OTk5MA%3D%3D/original/f85dac06-19c7-49ca-b841-e29dc46a1401.jpeg?im_w=720&im_format=avif",
+        "location": "Medellín",
+        "title":"Golden Valley Hotel. Colombia, Medellín",
+        "price": 450,
+        "availability": 3,
+        "capacity": 2,
+        "rating": "4.5",
+        "reviews": 250
+    },
+    {
+        "id": 2,
+        "image": "https://a0.muscache.com/im/pictures/miso/Hosting-1353598397038203339/original/17cefa50-8e6e-4126-99b2-a630f65dabca.png?im_w=720&im_format=avif",
+        "location":"New York",
+        "title":"House in USA, New York",
+        "price": 520,
+        "availability": 4,
+        "capacity": 7,
+        "rating": "4.8",
+        "reviews": 302
+    },
+    {
+        "id": 3,
+        "image": "https://a0.muscache.com/im/pictures/miso/Hosting-1087700286965149985/original/9cc38ed0-c30a-489d-b636-c8686d3dcc2d.jpeg?im_w=720&im_format=avif",
+        "location":"San Pedro",
+        "title":"San Pedro, Colombia",
+        "price": 70,
+        "availability": 5,
+        "capacity": 2,
+        "rating": "5.0",
+        "reviews": 109
+    },
+    {
+        "id": 4,
+        "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE5ODMxMjg3MDcxOTkwMzYxNg%3D%3D/original/297d3437-cff1-461c-88ad-a063bcc5ab75.jpeg?im_w=720&im_format=avif",
+        "location":"France",
+        "title":"Apartment in Issy-les-Mounlineaux ",
+        "price": 76,
+        "availability": 6,
+        "capacity": 4,
+        "rating": "4.9",
+        "reviews": 28
+    },
+    {
+        "id": 5,
+        "image": "https://a0.muscache.com/im/pictures/92c16e35-d887-4dc3-966a-6ddf7c0be0ea.jpg?im_w=720&im_format=avif",
+        "location":"Spain",
+        "title":"Apartment in Redondela",
+        "price": 520,
+        "availability": 8,
+        "capacity": 4,
+        "rating": "5.0",
+        "reviews": 289
+    },
+    {
+        "id": 6,
+        "image": "https://a0.muscache.com/im/pictures/c7240732-d3fb-4cc0-b76a-475e14295869.jpg?im_w=720&im_format=avif&im_origin=fuzzy",
+        "location":"Italy",
+        "title":"Home in Roccela, Italy",
+        "price": 65,
+        "availability": 8,
+        "capacity": 4,
+        "rating": "4.8",
+        "reviews": 200
+    },
+    {
+        "id": 7,
+        "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-1350217709836465115/original/1c35c27e-b005-4c59-9d44-0a5bc5da3916.jpeg?im_w=720&im_format=avif&im_origin=fuzzy",
+        "location":"Quito",
+        "title":"Flat in Quito Ecuador",
+        "price": 21,
+        "availability": 20,
+        "capacity": 3,
+        "rating": "4.5",
+        "reviews": 5
+    },
+    {
+        "id": 8,
+        "image": "https://a0.muscache.com/im/pictures/miso/Hosting-779819780949953715/original/3823a48a-0473-499b-860f-1cb483098ae4.jpeg?im_w=720&im_format=avif&im_origin=fuzzy",
+        "location":"Brazil",
+        "title":"Apartment Ubatuba, Brazil",
+        "price": 67,
+        "availability": 5,
+        "capacity": 4,
+        "rating": "4.8",
+        "reviews": 138
+    },
+    {
+        "id": 9,
+        "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-1349933288316640779/original/33b4d8ac-3e33-44e4-9ad6-7f17ce0325df.jpeg?im_w=720&im_format=avif&im_origin=fuzzy",
+        "location":"Peru",
+        "title":"Apartment in Cusco, Peru",
+        "price": 18,
+        "availability": 5,
+        "capacity": 2,
+        "rating": "4.5",
+        "reviews": 14
+    },
+    {
+        "id": 10,
+        "image": "https://a0.muscache.com/im/pictures/miso/Hosting-1252952271328916592/original/c10a02c3-c419-49c4-a9fa-22ee57c74fce.jpeg?im_w=720&im_format=avif&im_origin=fuzzy",
+        "location":"Spain",
+        "title":"Apartment in Redondela",
+        "price": 85,
+        "availability": 6,
+        "capacity": 4,
+        "rating": "5.0",
+        "reviews": 27
+    }
+]
