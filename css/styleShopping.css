@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #0D6EFD;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-item img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.cart-item h2, .cart-item p {
+    margin: 5px 0;
+}

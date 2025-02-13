@@ -1,4 +1,4 @@
-import'./signup.js' //NO SE
+import'./signup.js' 
 import './logout.js'
 import './login.js'
 
@@ -8,11 +8,6 @@ import { loginCheck } from './loginCheck.js'
 
 onAuthStateChanged(auth, async (user) => {
     loginCheck(user)
-    /*if (user) {
-        loginCheck(user)
-    } else {
-        loginCheck(user)
-    }*/
 })
 
 
