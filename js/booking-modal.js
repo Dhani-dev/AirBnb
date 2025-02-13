@@ -1,7 +1,7 @@
 $(document).on("click", "#bookTour", function() {
     // If user is not logged in
-    if (!localStorage.getItem("userLogged")) {
-        window.location.href = "login.html";
+    if (!sessionStorage.getItem("userLogged")) {
+        $("#signinModal").modal("show");
         return
     }
     $("#paymentModal").modal("show");
