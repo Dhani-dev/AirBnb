@@ -21,6 +21,7 @@ const observer = new MutationObserver(() => {
 
                 const modal = bootstrap.Modal.getInstance(document.querySelector('#signinModal'))
                 modal.hide()
+                sessionStorage.setItem("userLogged","true")
 
                 showMessage('Welcome '+ credentials.user.email)
 
