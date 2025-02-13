@@ -7,6 +7,7 @@ const observer = new MutationObserver(() => {
         console.log('Botón de logout encontrado.');
         logout.addEventListener('click', async () => {
             await signOut(auth)
+            sessionStorage.removeItem("userLogged")
             console.log('user signed out');
         });
         observer.disconnect(); // Dejar de observar cambios en el DOM
