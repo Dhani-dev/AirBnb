@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-auth.js";
+import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-auth.js"; //Autenticar usuario con correo y contraseña
 import { auth } from "./firebase.js";
 import {showMessage} from  './showMessage.js'
 
@@ -32,6 +32,7 @@ function initSignupForm() {
             const userCredentials = await createUserWithEmailAndPassword(auth, email, password);
             console.log("Usuario creado:", userCredentials);
 
+            //Cierre Modal de registro
             const sigupModal = document.querySelector('#signupModal')
             const modal = bootstrap.Modal.getInstance(sigupModal)
             modal.hide()
