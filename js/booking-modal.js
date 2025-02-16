@@ -1,9 +1,6 @@
 $(document).on("click", "#bookTour", function() {
     // Obtener el ID de la propiedad
     const propertyId = $(this).closest('.package-item').data('property-id');
-    
-    // Guardar el ID de la propiedad en sessionStorage ojito
-    //sessionStorage.setItem("purchasedPropertyId", propertyId); ojito
 
     // Obtener la lista actual de reservas desde localStorage
     let reservations = JSON.parse(localStorage.getItem("reservations")) || [];
