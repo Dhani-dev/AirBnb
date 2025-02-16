@@ -9782,3 +9782,8 @@ h6,
   font-size: 20px;
   color: #007bff;
 }
+
+.blue-bg {
+  color: #0D6EFD;
+  padding: 2px 5px;
+}

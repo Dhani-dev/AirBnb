@@ -30,7 +30,7 @@ $(document).ready(function () {
             properties.forEach((property) => {
                 content += `
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="package-item bg-white mb-2">
+                        <div class="package-item bg-white mb-2" data-property-id="${property.id}">
                             <img class="img-fluid" src="${property.image}" alt="">
                             <div class="p-4">
                                 <div class="d-flex justify-content-between mb-3">

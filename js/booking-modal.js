@@ -1,4 +1,23 @@
 $(document).on("click", "#bookTour", function() {
+    // Obtener el ID de la propiedad
+    const propertyId = $(this).closest('.package-item').data('property-id');
+    
+    // Guardar el ID de la propiedad en sessionStorage ojito
+    //sessionStorage.setItem("purchasedPropertyId", propertyId); ojito
+
+    // Obtener la lista actual de reservas desde localStorage
+    let reservations = JSON.parse(localStorage.getItem("reservations")) || [];
+
+    // Agregar la nueva reserva a la lista
+    if (!reservations.includes(propertyId)) {
+        reservations.push(propertyId);
+    }
+
+    // Guardar la lista actualizada en localStorage
+    localStorage.setItem("reservations", JSON.stringify(reservations));
+
+    console.log("Reservations updated:", reservations); // Depuración
+
     // If user is not logged in
     if (!sessionStorage.getItem("userLogged")) {
         $("#signinModal").modal("show");
@@ -18,25 +37,25 @@ document.getElementById("payNow").addEventListener("click", function () {
 
     // Check if all fields are filled
     if (!cardNumber || !expirationDate || !cvv) {
-        alert("Please fill in all required fields.");
+        alert("Por favor, rellene todos los campos obligatorios.");
         return;
     }
 
     // Validate card number
     if (cardNumber.length !== 16 || isNaN(cardNumber)) {
-        alert("Invalid card number. It should be 16 digits.");
+        alert("Número de tarjeta no válido. Debe tener 16 dígitos.");
         return;
     }
 
     // Validate expiration date
     if (!expirationDateRegex.test(expirationDate) || !isFutureDate(expirationDate)) {
-        alert("Invalid expiration date. Use MM/YY format and ensure it's a future date.");
+        alert("Fecha de vencimiento no válida. Utilice el formato MM/AA y asegúrese de que sea una fecha futura..");
         return;
     }
 
     // Validate CVV
     if (!cvvRegex.test(cvv)) {
-        alert("Invalid CVV. It should be 3 or 4 digits.");
+        alert("CVV no válido. Debe tener 3 o 4 dígitos.");
         return;
     }
 
@@ -45,6 +64,8 @@ document.getElementById("payNow").addEventListener("click", function () {
 
     setTimeout(() => {
         alert("Payment completed successfully!");
+        // Redirigir a la página de compra
+        window.location.href = "shopping.html";
     }, 100);
 });
 
